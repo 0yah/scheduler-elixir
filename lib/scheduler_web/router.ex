@@ -18,6 +18,10 @@ defmodule SchedulerWeb.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+    resources "/shifts", ShiftController
+    resources "/schedulings", SchedulingController
+    resources "/companies", CompanyController
+    
   end
 
   # Other scopes may use custom stacks.

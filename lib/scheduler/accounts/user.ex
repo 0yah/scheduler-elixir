@@ -15,6 +15,7 @@ defmodule Scheduler.Accounts.User do
     user
     |> cast(attrs, [:email, :name, :password])
     |> validate_required([:email, :name, :password])
+    |> validate_format(:email, ~r/.+@.+\..+/, [message: "Please input a valid email"])
     |> unique_constraint(:email)
   end
 end
